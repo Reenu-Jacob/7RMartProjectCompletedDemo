@@ -33,12 +33,6 @@ public class ManageCategoryPage {
 		PageFactory.initElements(driver, this);
 	}
 
-//	public void clickOnMoreInfoInManageCategory() {
-//		PageUtility page = new PageUtility();
-//		page.javaSriptClick(driver, moreInfoLink);
-//		// moreInfoLink.click();
-//	}
-
 	public ManageCategoryPage clickOnNewButton() {
 		newButton.click();
 		return this;
@@ -59,7 +53,6 @@ public class ManageCategoryPage {
 		waitUtility.elementToBeClickable(driver, imageUpload);
 		FileUploadUtility fileUpload = new FileUploadUtility();
 		fileUpload.fileUploadUsingSendKeys(imageUpload, Constant.IMAGEFILE);
-		// fileUpload.fileuploadUsingRobertClass(imageUpload,Constant.IMAGEFILE);
 		return this;
 	}
 

@@ -19,11 +19,5 @@ public class HomeTest extends Base {
 		loginPage.enterUserName(username).enterPassword(password);
 		homePage=loginPage.clickSignIn();
 		homePage.clickOnAdmin().clickOnLogOut();
-//		loginPage.enterUserName(username);
-//		loginPage.enterPassword(password);
-//		loginPage.clickSignIn();
-//		HomePage logOut = new HomePage(driver);
-//		logOut.clickOnAdmin();
-//		logOut.clickOnLogOut();
 	}
 }

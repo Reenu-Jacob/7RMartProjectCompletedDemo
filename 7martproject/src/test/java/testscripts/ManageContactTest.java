@@ -22,9 +22,7 @@ public class ManageContactTest extends Base {
 		String password = ExcelUtility.getStringData(1, 1, "LoginPage");
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.enterUserName(username).enterPassword(password);
-		//loginPage.enterPassword(password);
 		homePage=loginPage.clickSignIn();
-		//ManageContactPage manageContact = new ManageContactPage(driver);
 		manageContact=homePage.clickOnMoreInfoButtonInManageContact();
 		manageContact.clickOnEditDetailsButton();
 		FakerUtility faker = new FakerUtility();
@@ -41,9 +39,7 @@ public class ManageContactTest extends Base {
 		String password = ExcelUtility.getStringData(1, 1, "LoginPage");
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.enterUserName(username).enterPassword(password);
-		//loginPage.enterPassword(password);
 		homePage=loginPage.clickSignIn();
-		//ManageContactPage manageContact = new ManageContactPage(driver);
 		manageContact=homePage.clickOnMoreInfoButtonInManageContact();
 		manageContact.clickOnEditDetailsButton();
 		boolean isPresent = manageContact.updateButtonIsDisplayedOrNot();

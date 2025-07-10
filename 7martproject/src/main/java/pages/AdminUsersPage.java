@@ -8,8 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.PageUtility;
 
 public class AdminUsersPage {
-//	@FindBy(xpath = "//section[@class='content']/div/div/div[1]/div/a")
-//	WebElement moreInfoLink;
+
 	@FindBy(xpath = "//section[@class='content']/div/a[1]")
 	WebElement newButtonLink;
 	@FindBy(xpath = "//input[@id='username']")
@@ -20,14 +19,15 @@ public class AdminUsersPage {
 	WebElement selectAdmin;
 	@FindBy(xpath = "//button[@name='Create']")
 	WebElement saveButton;
-	// @FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/user/edit?edit=14552&page_ad=1']")WebElement
-	// editAction;
-	// @FindBy(xpath="//table/tbody/tr[3]/td[5]/a[2]")WebElement editAction;
 	@FindBy(xpath = "//table/tbody/tr[1]/td[5]/a[2]/i")
 	WebElement editAction;
 	@FindBy(css = "button[name='Update']")
 	WebElement editClick;
-
+	@FindBy(xpath="//html/body/div/div[1]/section/div[2]/div/div[1]/text()[3]")
+	WebElement alertMsgforNewAdmin;
+	@FindBy(xpath="//html/body/div/div[1]/section/div[2]/div/div[1]/text()[3]")
+	WebElement alertMsgforEditAdmin;
+	
 	public WebDriver driver;
 
 	public AdminUsersPage(WebDriver driver) {
@@ -35,12 +35,6 @@ public class AdminUsersPage {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-
-//	public void clickOnAdminUser() {
-//		// moreInfoLink.click();
-//		PageUtility page = new PageUtility();
-//		page.javaSriptClick(driver, moreInfoLink);
-//	}
 
 	public AdminUsersPage clickOnNewButtoninAdminUser() {
 		// newButtonLink.click();
@@ -99,4 +93,6 @@ public class AdminUsersPage {
 		page.javaSriptClick(driver, editClick);
 		return this;
 	}
+
 }
+

@@ -10,6 +10,4 @@ public class Constant {
 	public static final String LOGINVALIDASSERTION="Home page not loaded";
 	
 	public static final String INVALIDUSERNAMEANDPASSWORD="Invalid Username";
-	
-
 }

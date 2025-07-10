@@ -21,16 +21,13 @@ public class ManageCategoryTest extends Base {
 		String password = ExcelUtility.getStringData(1, 1, "LoginPage");
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.enterUserName(username).enterPassword(password);
-		//loginPage.enterPassword(password);
-		homePage=loginPage.clickSignIn();
-		 PageUtility page=new PageUtility();
-		 page.scroll(driver);
-		//ManageCategoryPage manageCategory = new ManageCategoryPage(driver);
-		manageCategory=homePage.clickOnMoreInfoInManageCategory();
+		homePage = loginPage.clickSignIn();
+		PageUtility page = new PageUtility();
+		page.scroll(driver);
+		manageCategory = homePage.clickOnMoreInfoInManageCategory();
 		manageCategory.clickOnNewButton();
 		manageCategory.addNewCategory();
 		manageCategory.clickOnGroups();
-		// page.scroll(driver);
 		manageCategory.uploadImage();
 		manageCategory.clickOnSave();
 

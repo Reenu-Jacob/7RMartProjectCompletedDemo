@@ -23,9 +23,7 @@ public class ManageNewsTest extends Base {
 		String news = "Hello world";
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.enterUserName(username).enterPassword(password);
-		//loginPage.enterPassword(password);
 		homePage=loginPage.clickSignIn();
-		//ManageNewsPage manageNews = new ManageNewsPage(driver);
 		manageNews=homePage.clickOnManageNews();
 		manageNews.clickOnNewButton();
 		manageNews.enterNewsInTextBox(news);
@@ -41,7 +39,6 @@ public class ManageNewsTest extends Base {
 		String password = ExcelUtility.getStringData(1, 1, "LoginPage");
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.enterUserName(username).enterPassword(password);
-		//loginPage.enterPassword(password);
 		homePage=loginPage.clickSignIn();
 		FakerUtility faker = new FakerUtility();
 		String newsUpdated = faker.generateRandomText();

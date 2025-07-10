@@ -20,10 +20,8 @@ public class FooterTest extends Base
 		String password = ExcelUtility.getStringData(1, 1, "LoginPage");
 		LoginPage loginpage = new LoginPage(driver);
 		loginpage.enterUserName(username).enterPassword(password);
-		//loginpage.enterPassword(password);
 		homePage=loginpage.clickSignIn();
 		FakerUtility faker = new FakerUtility();
-		//FooterPage footer = new FooterPage(driver);
 		footer=homePage.clickOnMoreInfoLink();
 		footer.clickOnEditButton();
 		footer.editAddressTextBox(faker.generateAddress());

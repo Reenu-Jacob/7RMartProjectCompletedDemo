@@ -22,9 +22,6 @@ public class LoginTest extends Base {
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.enterUserName(username).enterPassword(password);
 		homePage=loginPage.clickSignIn();
-//		loginPage.enterUserName(username);
-//		loginPage.enterPassword(password);
-//		loginPage.clickSignIn();
 		boolean displayedOrNot = loginPage.isDashboardDisplayed();
 		Assert.assertTrue(displayedOrNot, Constant.LOGINVALIDASSERTION);
 	}
@@ -36,9 +33,6 @@ public class LoginTest extends Base {
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.enterUserName(username).enterPassword(password);
 		homePage=loginPage.clickSignIn();
-//		loginPage.enterUserName(username);
-//		loginPage.enterPassword(password);
-//		loginPage.clickSignIn();
 		boolean alertDisplayedOrNot = loginPage.isInvalidUsernameOrPasswordDisplayed();
 		Assert.assertTrue(alertDisplayedOrNot, Constant.INVALIDUSERNAMEANDPASSWORD);
 	}
@@ -50,9 +44,6 @@ public class LoginTest extends Base {
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.enterUserName(username).enterPassword(password);
 		homePage=loginPage.clickSignIn();
-//		loginPage.enterUserName(username);
-//		loginPage.enterPassword(password);
-//		loginPage.clickSignIn();
 		boolean alertDisplayedOrNot = loginPage.isInvalidUsernameOrPasswordDisplayed();
 		Assert.assertTrue(alertDisplayedOrNot,Constant.INVALIDUSERNAMEANDPASSWORD );
 	}
@@ -62,9 +53,6 @@ public class LoginTest extends Base {
 		LoginPage loginPage = new LoginPage(driver);
 		loginPage.enterUserName(username).enterPassword(password);
 		homePage=loginPage.clickSignIn();
-//		loginPage.enterUserName(username);
-//		loginPage.enterPassword(password);
-//		loginPage.clickSignIn();
 		boolean alertDisplayedOrNot = loginPage.isInvalidUsernameOrPasswordDisplayed();
 		Assert.assertTrue(alertDisplayedOrNot,Constant.INVALIDUSERNAMEANDPASSWORD);
 	}

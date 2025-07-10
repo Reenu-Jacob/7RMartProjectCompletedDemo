@@ -8,8 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.PageUtility;
 
 public class ManageContactPage {
-//	@FindBy(xpath = "//section[@class='content']/div/div/div[3]/div/a")
-//	WebElement moreInfoLink;
+
 	@FindBy(xpath = "//div[@class='card']/div[2]/table/tbody/tr/td/a/i")
 	WebElement updateContact;
 	@FindBy(id = "email")
@@ -24,11 +23,6 @@ public class ManageContactPage {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-
-//	public ManageContactPage clickOnMoreInfoButton() {
-//		PageUtility page = new PageUtility();
-//		page.javaSriptClick(driver, moreInfoLink);
-//	}
 
 	public ManageContactPage clickOnEditDetailsButton() {
 		// updateContact.click();

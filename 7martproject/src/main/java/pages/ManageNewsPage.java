@@ -8,10 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.PageUtility;
 
 public class ManageNewsPage {
-//	@FindBy(xpath = "//section[@class='content']/div/div/div[7]/div/a")
-//	WebElement moreInfoLink;
-//	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/news/add']")
-//	WebElement newButtonLink;
+
 	@FindBy(xpath = "//section[@class='content']/div[1]/a[1]/i")
 	WebElement newButtonLink;
 	@FindBy(xpath = "//textarea[@id='news']")
@@ -20,8 +17,6 @@ public class ManageNewsPage {
 	WebElement saveButton;
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
 	WebElement alertmsg;
-	// @FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/news/edit?edit=6428&page_ad=1']/i")WebElement
-	// editNewsBtn;
 	@FindBy(xpath = "//table/tbody/tr[1]/td[2]/a[1]/i")
 	WebElement editNewsBtn;
 	@FindBy(css = "button[name='update']")
@@ -33,10 +28,6 @@ public class ManageNewsPage {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-
-//	public void clickOnManageNews() {
-//		moreInfoLink.click();
-//	}
 
 	public ManageNewsPage clickOnNewButton() {
 		newButtonLink.click();

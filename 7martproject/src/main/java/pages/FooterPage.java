@@ -6,8 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class FooterPage {
-//	@FindBy(xpath = "//section[@class='content']/div/div/div[8]/div/a")
-//	WebElement moreInfoLink;
+
 	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/Footertext/edit?edit=1']/i")
 	WebElement editButton;
 	@FindBy(xpath = "//textarea[@id='content']")
@@ -26,10 +25,6 @@ public class FooterPage {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-
-//	public void clickOnMoreInfoLink() {
-//		moreInfoLink.click();
-//	}
 
 	public FooterPage clickOnEditButton() {
 		editButton.click();

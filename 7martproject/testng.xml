@@ -11,9 +11,9 @@
 			<class name="testscripts.ManageNewsTest" />
 			<class name="testscripts.ManageContactTest" />
 			<class name="testscripts.FooterTest" />
-			<class name="testscripts.AdminUserTest" />
 			<class name="testscripts.HomeTest" />
 			<class name="testscripts.LoginTest" />
+			<class name="testscripts.AdminUserTest" />
 		</classes>
 	</test> <!--
 	Test -->

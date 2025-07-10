@@ -34,15 +34,12 @@ public class Base {
 			System.out.println("INVALID");
 		}
 		if (browser.equalsIgnoreCase("chrome")) {
-			// ChromeOptions options = new ChromeOptions();
 			driver = new ChromeDriver();
 		} else if (browser.equalsIgnoreCase("edge")) {
 			driver = new EdgeDriver();
 		} else {
 			throw new Exception("INVALID");
 		}
-		// driver=new ChromeDriver();
-		// driver.get("https://groceryapp.uniqassosiates.com/admin");
 		driver.get(properties.getProperty("url"));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(WaitUtility.IMPLICIT_WAIT));
 		driver.manage().window().maximize();

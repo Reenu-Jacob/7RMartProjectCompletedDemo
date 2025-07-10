@@ -36,7 +36,6 @@ public class LoginPage {
 		pass.sendKeys(password);
 		return this;
 	}
-//purpose?
 	public HomePage clickSignIn() {
 		signIn.click();
 		return new HomePage(driver);
