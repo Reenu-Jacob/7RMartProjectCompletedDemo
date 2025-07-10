@@ -7,68 +7,74 @@ import org.openqa.selenium.support.PageFactory;
 
 import utilities.PageUtility;
 
-public class ManageNewsPage 
-{
-	@FindBy(xpath="//section[@class='content']/div/div/div[7]/div/a")WebElement moreInfoLink;
-	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/news/add']")WebElement newButtonLink;
-	@FindBy(xpath="//textarea[@id='news']")WebElement newsTextBox;
-	@FindBy(xpath="//button[@type='submit']")WebElement saveButton;
-	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")WebElement alertmsg;
-	//@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/news/edit?edit=6428&page_ad=1']/i")WebElement editNewsBtn;
-	@FindBy(xpath="//table/tbody/tr[1]/td[2]/a[1]/i")WebElement editNewsBtn;
-	@FindBy(css="button[name='update']")WebElement updateNewsBtn;
+public class ManageNewsPage {
+//	@FindBy(xpath = "//section[@class='content']/div/div/div[7]/div/a")
+//	WebElement moreInfoLink;
+//	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/news/add']")
+//	WebElement newButtonLink;
+	@FindBy(xpath = "//section[@class='content']/div[1]/a[1]/i")
+	WebElement newButtonLink;
+	@FindBy(xpath = "//textarea[@id='news']")
+	WebElement newsTextBox;
+	@FindBy(xpath = "//button[@type='submit']")
+	WebElement saveButton;
+	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")
+	WebElement alertmsg;
+	// @FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/news/edit?edit=6428&page_ad=1']/i")WebElement
+	// editNewsBtn;
+	@FindBy(xpath = "//table/tbody/tr[1]/td[2]/a[1]/i")
+	WebElement editNewsBtn;
+	@FindBy(css = "button[name='update']")
+	WebElement updateNewsBtn;
 	public WebDriver driver;
-	
-	public ManageNewsPage(WebDriver driver) 
-	{
-		//assign global with local
-		this.driver=driver;
+
+	public ManageNewsPage(WebDriver driver) {
+		// assign global with local
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	
-	public void clickOnManageNews() 
-	{
-		moreInfoLink.click();
-	}
-	
-	public void clickOnNewButton()
-	{
+
+//	public void clickOnManageNews() {
+//		moreInfoLink.click();
+//	}
+
+	public ManageNewsPage clickOnNewButton() {
 		newButtonLink.click();
+		return this;
 	}
-	
-	public void enterNewsInTextBox(String news)
-	{
+
+	public ManageNewsPage enterNewsInTextBox(String news) {
 		newsTextBox.sendKeys(news);
+		return this;
 	}
-	
-	public void clickOnSaveButton()
-	{
+
+	public ManageNewsPage clickOnSaveButton() {
 		saveButton.click();
+		return this;
 	}
-	
-	public boolean alertDisplayed()
-	{
+
+	public boolean alertDisplayed() {
 		return alertmsg.isDisplayed();
 	}
-	
-	public void clickOnEdit()
-	{
-		//editNewsBtn.click();
-		PageUtility page=new PageUtility();
+
+	public ManageNewsPage clickOnEdit() {
+		// editNewsBtn.click();
+		PageUtility page = new PageUtility();
 		page.javaSriptClick(driver, editNewsBtn);
+		return this;
 	}
-	
-	public void editNews(String news)
-	{
+
+	public ManageNewsPage editNews(String news) {
 		newsTextBox.clear();
 		newsTextBox.sendKeys(news);
+		return this;
 	}
-	
-	public void clickOnUpdateButton()
-	{
-		//updateNewsBtn.click();
-		PageUtility page=new PageUtility();
+
+	public ManageNewsPage clickOnUpdateButton() {
+		// updateNewsBtn.click();
+		PageUtility page = new PageUtility();
 		page.javaSriptClick(driver, updateNewsBtn);
+		return this;
 	}
-	
+
 }

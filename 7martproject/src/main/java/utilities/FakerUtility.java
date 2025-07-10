@@ -2,33 +2,27 @@ package utilities;
 
 import com.github.javafaker.Faker;
 
-public class FakerUtility 
-{
-Faker faker=new Faker();
-	
-	public String creatARandomFirstName()
-	{
+public class FakerUtility {
+	Faker faker = new Faker();
+
+	public String creatARandomFirstName() {
 		return faker.name().firstName();
 	}
-	
-	public String creatARandomLastName()
-	{
+
+	public String creatARandomLastName() {
 		return faker.name().lastName();
 	}
-	
-	public String generateAddress()
-	{
+
+	public String generateAddress() {
 		return faker.address().fullAddress();
 	}
-	
-	public String generateEmail()
-	{
+
+	public String generateEmail() {
 		return faker.internet().emailAddress();
 
 	}
-	
-	public String generateRandomText()
-	{
+
+	public String generateRandomText() {
 		return faker.job().position();
 
 	}
