@@ -23,9 +23,9 @@ public class AdminUsersPage {
 	WebElement editAction;
 	@FindBy(css = "button[name='Update']")
 	WebElement editClick;
-	@FindBy(xpath="//html/body/div/div[1]/section/div[2]/div/div[1]/text()[3]")
+	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")
 	WebElement alertMsgforNewAdmin;
-	@FindBy(xpath="//html/body/div/div[1]/section/div[2]/div/div[1]/text()[3]")
+	@FindBy(xpath="//h5[text()=' Alert!']")
 	WebElement alertMsgforEditAdmin;
 	
 	public WebDriver driver;
@@ -67,7 +67,11 @@ public class AdminUsersPage {
 		return this;
 
 	}
-
+	
+	public boolean isDisplayAlertForNewUser() {
+		return alertMsgforNewAdmin.isDisplayed();
+	}
+	
 	public AdminUsersPage clickOnEdit() {
 		// editAction.click();
 		PageUtility page = new PageUtility();
@@ -93,6 +97,8 @@ public class AdminUsersPage {
 		page.javaSriptClick(driver, editClick);
 		return this;
 	}
-
+	public boolean isDisplayAlertForEdit() {
+		return alertMsgforEditAdmin.isDisplayed();
+	}
 }
 

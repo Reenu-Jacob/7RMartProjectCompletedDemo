@@ -32,6 +32,8 @@ public class AdminUserTest extends Base
 		adminUsersPage.enterPassword(Adminpassword);
 		adminUsersPage.selectUserType();
 		adminUsersPage.clickOnSave();
+		boolean isNewAlert=adminUsersPage.isDisplayAlertForNewUser();
+		Assert.assertTrue(isNewAlert, Constant.ADMINNEWALERTMSG);
 	}
 
 	@Test
@@ -49,5 +51,7 @@ public class AdminUserTest extends Base
 		adminUsersPage.updateUsername(Adminusername);
 		adminUsersPage.updatePassword(Adminpassword);
 		adminUsersPage.clickOnUpdate();
+		boolean isEditAlert=adminUsersPage.isDisplayAlertForEdit();
+		Assert.assertTrue(isEditAlert, Constant.ADMINEDITALERTMSG);
 	}
 }
